@@ -1,13 +1,20 @@
-
 def my_collect(languages)
-  counter = 0
-  empty_array = []
-  while counter < languages.length
-  empty_array << yield(languages[counter])
-      counter += 1
-end
-empty_array
+i = 0 
+collection = []
+while i < languages.length
+   collection << yield(languages[i])
+   i += 1 
+  end
+  collection.upcase 
 end
 
 
-my_collect(%w[ruby python closure]) {|names| "I love to code with #{names}."}
+
+#def hello(array)
+ # i = 0
+  #collection = []
+  #while i < array.length
+   # collection << yield(array[i])
+  #  i += 1
+#  end
+#end
